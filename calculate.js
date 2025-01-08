@@ -62,8 +62,18 @@ var MAXZOD = 12;      /* Max zodiacs */
 /* Houses or Bhavas */
 
 
-  function  generate(  )  {
-    parse_input_data();
+  function  generate(  name,
+    dob,
+    timeIs,
+    timeStamp,
+    lat,
+    long )  {
+    parse_input_data( name,
+        dob,
+        timeIs,
+        timeStamp,
+        lat,
+        long);
     calc_position(false);
 
     var kun = [];
@@ -78,18 +88,22 @@ var MAXZOD = 12;      /* Max zodiacs */
 
     return  kun;
 }
-// (req, res) {
-  
-// }
+ 
 
-function parse_input_data() {
+function parse_input_data( name,
+    dob,
+    timeIs,
+    timeStamp,
+    lat,
+    long) {
 
-    name = ('irshad');
-    parse_date('1996-12-31');
-    parse_time('04:47:4');
-    tz = (5);
-    parse_latitude('13N55');
-    parse_longitude('75E33');
+    name = this.name;
+    parse_date(dob);
+    parse_time(timeIs);
+    tz = (timeStamp);
+    parse_latitude(    lat,
+    );
+    parse_longitude( long);
 
 
 
