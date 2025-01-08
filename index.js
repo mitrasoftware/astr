@@ -4,7 +4,7 @@ const {generate}  = require('./calculate')
 const app = express()
 
 const PORT = 8000
-app.get('/users',   (req, res) =>   {
+app.get('/',   (req, res) =>   {
 
    var  response = generate();
     
